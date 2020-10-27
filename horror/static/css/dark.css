@@ -29,11 +29,12 @@ img {
   color: #fdc500;
 }
 .story-board {
-  padding-left: 15%;
-  padding-right: 15%;
+  padding-left: 20%;
+  padding-right: 20%;
   padding-top: 5%;
   padding-bottom: 5%;
   background-color: #22223b;
+  word-wrap: break-word;
 }
 
 p {
@@ -319,5 +320,15 @@ h3:nth-child(3) {
   100% {
     transform: none;
     opacity: 0.25;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .story-board {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: #22223b;
+    word-wrap: break-word;
   }
 }
