@@ -1,0 +1,67 @@
+{% load static %}
+<html>
+
+<head>
+    <title> No Sleeps</title>
+    <link rel="icon" href="{% static 'images/clown.png' %}" type="image/x-icon">
+    <link id="horrorsheet" rel="stylesheet" type="text/css" href="{% static 'css/light.css' %}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+    <a name="top"></a>
+    <div class="top-set-div">
+        <a href="{% url 'about' %}" class="no-sleeps-btn"> No Sleeps</a>
+        <a href="#" class="dark-switch-btn" onClick="return darkSwitch()">Dark</a>
+        <a href="#" class="light-switch-btn" onClick="return lightSwitch()">Light</a>
+    </div>
+
+    <div class="story-board">
+
+        <h3>{{data.title}}
+            <img src="{% static 'images/clown.png' %}">
+        </h3>
+        <h6>By <a class="user-name-link" href="https://www.reddit.com/user/{{data.author}}">r/{{data.author}}</a></h6>
+        <hr>
+
+        {% autoescape on %}
+        <p>{{data.selftext | linebreaks }}</p>
+        {% endautoescape %}
+        <hr>
+        <p>
+            Liked this story? Go and upvote <a class="url-btn" href="{{data.url}}">here!</a> Wait for the next top
+            story!
+        </p>
+        <a href="#top" class="read-again-btn">Read again</a>
+        <div class="credit-section">
+            <p> Made by
+                <a class="credit-link" href="https://github.com/rpraveenpai">
+                    Pai 💀
+                </a>
+            </p>
+            <a href="https://icons8.com/icons/set/scary-clown">
+                <img src="{% static 'images/clown.png' %}" class="credit-link"></a>
+            icon by
+            <a target="_blank" class="credit-link" href="https://icons8.com">Icons8</a>
+        </div>
+
+    </div>
+
+
+    <script>
+        let lightSwitch = () => {
+            var light = "{% static 'css/light.css' %}"
+            document.getElementById("horrorsheet").href = light
+        }
+
+        let darkSwitch = () => {
+            var dark = "{% static 'css/dark.css' %}"
+            document.getElementById("horrorsheet").href = dark
+        }
+    </script>
+
+</body>
+
+</html>

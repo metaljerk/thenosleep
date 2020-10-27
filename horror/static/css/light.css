@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
+
+html,
+body {
+  background-color: #eeeeee;
+}
+
+h6 {
+  font-family: "Syne Mono", monospace;
+  color: #008891;
+}
+
+h6 a:link {
+  color: #008891;
+}
+h6 a:hover {
+  color: #008891;
+}
+
+img {
+  float: inherit;
+  height: 50px;
+  width: 50px;
+  opacity: 1;
+}
+.user-name-link {
+  color: #008891;
+}
+.story-board {
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: #eeeeee;
+}
+p {
+  font-family: "Syne Mono", monospace;
+  color: #596e79;
+}
+p a:link {
+  color: #008891;
+}
+p a:hover {
+  color: #008891;
+}
+
+.read-again-btn {
+  font-size: large;
+  color: #008891;
+  font-family: "Syne Mono", monospace;
+  border: 2px solid#008891;
+  padding: 1%;
+}
+.read-again-btn:hover {
+  color: #008891;
+  text-decoration: none;
+  background-color: #e6d5b8;
+}
+
+.dark-switch-btn {
+  position: absolute;
+  top: 5px;
+  right: 30px;
+  float: inherit;
+  border: 2px solid #008891;
+  padding: 2px;
+  font-family: "Syne Mono", monospace;
+  color: #008891;
+}
+.dark-switch-btn:hover {
+  color: #008891;
+  text-decoration: none;
+  background-color: #e6d5b8;
+}
+.light-switch-btn {
+  position: absolute;
+  top: 5px;
+  right: 75px;
+  float: inherit;
+  border: 2px solid #008891;
+  padding: 2px;
+  font-family: "Syne Mono", monospace;
+  color: #008891;
+}
+.light-switch-btn:hover {
+  color: #008891;
+  text-decoration: none;
+  background-color: #e6d5b8;
+}
+
+.url-btn {
+  color: #f05454;
+}
+.url-btn:hover {
+  color: #f05454;
+  text-decoration: none;
+}
+
+.top-set-div {
+  background-color: #eeeeee;
+  padding: 20px;
+}
+
+.credit-section {
+  background-color: #eeeeee;
+  padding-top: 5%;
+  font-family: "Syne Mono", monospace;
+  color: #555555;
+}
+.credit-link {
+  float: inherit;
+  color: #008891;
+  height: 30px;
+  width: 30px;
+}
+.credit-link:hover {
+  text-decoration: none;
+  color: #008891;
+}
+
+.no-sleeps-btn {
+  color: #008891;
+  font-family: "Syne Mono", monospace;
+  border: 2px solid #008891;
+  float: inherit;
+  position: absolute;
+  padding-right: 1%;
+  padding-left: 1%;
+  top: 5px;
+  left: 30px;
+}
+.no-sleeps-btn:hover {
+  color: #008891;
+  background-color: #e6d5b8;
+  text-decoration: none;
+}
+
+/* spooky Heading with animation */
+h3 {
+  color: #555555;
+  text-transform: uppercase;
+  font-family: "Syne Mono", monospace;
+
+  /*Animation*/
+  animation: glitch1 2.5s infinite;
+}
+
+h3:nth-child(2) {
+  color: #555555;
+  animation: glitch2 2.5s infinite;
+}
+
+h3:nth-child(3) {
+  color: #555555;
+  animation: glitch3 2.5s infinite;
+}
+/*Keyframes*/
+
+@keyframes glitch1 {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  7% {
+    transform: skew(-0.5deg, -0.9deg);
+    opacity: 1;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: skew(0.8deg, -0.1deg);
+    opacity: 1;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: skew(-1deg, 0.2deg);
+    opacity: 1;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: skew(0.4deg, 1deg);
+    opacity: 1;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes glitch2 {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  7% {
+    transform: translate(-2px, -3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: translate(-5px, -2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: translate(-5px, -1px);
+    opacity: 1;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: translate(-2px, -6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes glitch3 {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  7% {
+    transform: translate(2px, 3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: translate(5px, 2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(5px, 1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(2px, 6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
