@@ -51,17 +51,26 @@
 
 
     <script>
-        let lightSwitch = () => {
-            var light = "{% static 'css/light.css' %}"
+        var themeSet = localStorage.getItem('theme')
+        var light = "{% static 'css/light.css' %}"
+        var dark = "{% static 'css/dark.css' %}"
+        console.log("theme:", themeSet)
+        if (themeSet == null || themeSet == light) {
+            lightSwitch()
+        }
+        else {
+            darkSwitch()
+        }
+        function lightSwitch() {
             document.getElementById("horrorsheet").href = light
+            localStorage.setItem('theme', light)
         }
 
-        let darkSwitch = () => {
-            var dark = "{% static 'css/dark.css' %}"
+        function darkSwitch() {
             document.getElementById("horrorsheet").href = dark
+            localStorage.setItem('theme', dark)
         }
     </script>
-
 </body>
 
 </html>

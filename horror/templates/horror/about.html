@@ -35,6 +35,20 @@
 
     </div>
 
+    <script>
+        var themeSet = localStorage.getItem('theme')
+        var light = "{% static 'css/light.css' %}"
+        var dark = "{% static 'css/dark.css' %}"
+        console.log("theme:", themeSet)
+        if (themeSet == null || themeSet == light) {
+            document.getElementById("horrorsheet").href = light
+            localStorage.setItem('theme', light)
+        }
+        else {
+            document.getElementById("horrorsheet").href = dark
+            localStorage.setItem('theme', dark)
+        }
+    </script>
 </body>
 
 </html>
