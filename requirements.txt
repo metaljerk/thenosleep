@@ -6,10 +6,15 @@ Django==3.1.2
 django-heroku==0.3.1
 gunicorn==20.0.4
 idna==2.10
+praw==7.1.0
+prawcore==1.5.0
 psycopg2==2.8.6
 pytz==2020.1
 requests==2.24.0
+six==1.15.0
 sqlparse==0.4.1
+update-checker==0.18.0
 urllib3==1.25.11
+websocket-client==0.57.0
 whitenoise==5.2.0
 yapf==0.30.0
