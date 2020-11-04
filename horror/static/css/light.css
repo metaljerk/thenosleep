@@ -1,26 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
-
 html,
 body {
-  background-color: #eeeeee;
+  background-color: #eee;
 }
-
 h1 {
   font-family: "Syne Mono", monospace;
-  color: #555555;
+  color: #555;
 }
 h6 {
   font-family: "Syne Mono", monospace;
   color: #008891;
 }
-
 h6 a:link {
   color: #008891;
 }
 h6 a:hover {
   color: #008891;
 }
-
 img {
   float: inherit;
   height: 50px;
@@ -35,7 +31,7 @@ img {
   padding-right: 20%;
   padding-top: 5%;
   padding-bottom: 5%;
-  background-color: #eeeeee;
+  background-color: #eee;
   word-wrap: break-word;
 }
 p {
@@ -48,7 +44,6 @@ p a:link {
 p a:hover {
   color: #008891;
 }
-
 .go-top-btn {
   font-size: large;
   color: #008891;
@@ -57,12 +52,11 @@ p a:hover {
   padding: 1%;
 }
 .go-top-btn:hover {
-  color: #555555;
+  color: #555;
   text-decoration: none;
-  box-shadow: 3px 5px #555555;
+  box-shadow: 3px 5px #555;
   opacity: 1;
 }
-
 .dark-switch-btn {
   position: absolute;
   top: 5px;
@@ -70,7 +64,7 @@ p a:hover {
   float: inherit;
   border: 2px solid #008891;
   font-family: "Syne Mono", monospace;
-  color: #555555;
+  color: #555;
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   font-size: 20px;
   padding-left: 2px;
@@ -78,9 +72,9 @@ p a:hover {
   opacity: 0.9;
 }
 .dark-switch-btn:hover {
-  color: #555555;
+  color: #555;
   text-decoration: none;
-  box-shadow: 3px 5px #555555;
+  box-shadow: 3px 5px #555;
   opacity: 1;
 }
 .light-switch-btn {
@@ -92,18 +86,17 @@ p a:hover {
   padding-left: 2px;
   padding-right: 2px;
   font-family: "Syne Mono", monospace;
-  color: #555555;
+  color: #555;
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   font-size: 20px;
   opacity: 0.9;
 }
 .light-switch-btn:hover {
-  color: #555555;
+  color: #555;
   text-decoration: none;
-  box-shadow: 3px 5px #555555;
+  box-shadow: 3px 5px #555;
   opacity: 1;
 }
-
 .url-btn {
   color: #f05454;
 }
@@ -111,17 +104,16 @@ p a:hover {
   color: #f05454;
   text-decoration: none;
 }
-
 .top-set-div {
-  background-color: #eeeeee;
+  background-color: #eee;
   padding: 20px;
 }
-
 .credit-section {
-  background-color: #eeeeee;
+  background-color: #eee;
   padding-top: 5%;
   font-family: "Syne Mono", monospace;
-  color: #555555;
+  color: #555;
+  font-weight: bold;
 }
 .credit-link {
   float: inherit;
@@ -133,9 +125,8 @@ p a:hover {
   text-decoration: none;
   color: #008891;
 }
-
 .back-about-btn {
-  color: #555555;
+  color: #555;
   font-family: "Syne Mono", monospace;
   border: 2px solid #008891;
   float: inherit;
@@ -149,31 +140,29 @@ p a:hover {
   opacity: 0.9;
 }
 .back-about-btn:hover {
-  color: #555555;
+  color: #555;
   text-decoration: none;
-  box-shadow: 3px 5px #555555;
+  box-shadow: 3px 5px #555;
   opacity: 1;
 }
-
 .post-box {
   font-family: "Syne Mono", monospace;
   border: 2px solid #008891;
   padding: 2%;
-  color: #555555;
+  color: #555;
   margin-bottom: 20px;
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
   word-wrap: break-word;
   opacity: 0.9;
 }
 .post-box:hover {
-  box-shadow: 5px 10px #555555;
+  box-shadow: 5px 10px #555;
   text-decoration: none;
   opacity: 1;
 }
 .post-box-link:hover {
   text-decoration: none;
 }
-
 .awards-img {
   height: 25px;
   width: 25px;
@@ -189,11 +178,10 @@ p a:hover {
   padding: 1%;
   display: none;
 }
-
 .share-wts-btn:hover {
-  color: #555555;
+  color: #555;
   text-decoration: none;
-  box-shadow: 3px 5px #555555;
+  box-shadow: 3px 5px #555;
   opacity: 1;
 }
 .share-face-btn {
@@ -203,48 +191,37 @@ p a:hover {
   border: 2px solid#008891;
   padding: 1%;
 }
-
 .share-face-btn:hover {
-  color: #555555;
+  color: #555;
   text-decoration: none;
-  box-shadow: 3px 5px #555555;
+  box-shadow: 3px 5px #555;
   opacity: 1;
 }
-
 .coffee-btn {
   color: #fcb00b;
 }
-
 .coffee-btn:hover {
   color: #fcb00b;
   text-decoration: none;
 }
-
 .coffee-img {
   height: 30px;
   width: 25px;
 }
-/* spooky Heading with animation */
 h3 {
-  color: #555555;
+  color: #555;
   text-transform: uppercase;
   font-family: "Syne Mono", monospace;
-
-  /*Animation*/
   animation: glitch1 2.5s infinite;
 }
-
 h3:nth-child(2) {
-  color: #555555;
+  color: #555;
   animation: glitch2 2.5s infinite;
 }
-
 h3:nth-child(3) {
-  color: #555555;
+  color: #555;
   animation: glitch3 2.5s infinite;
 }
-/*Keyframes*/
-
 @keyframes glitch1 {
   0% {
     transform: none;
@@ -299,7 +276,6 @@ h3:nth-child(3) {
     opacity: 1;
   }
 }
-
 @keyframes glitch2 {
   0% {
     transform: none;
@@ -354,7 +330,6 @@ h3:nth-child(3) {
     opacity: 1;
   }
 }
-
 @keyframes glitch3 {
   0% {
     transform: none;
@@ -409,14 +384,13 @@ h3:nth-child(3) {
     opacity: 0.25;
   }
 }
-
 @media only screen and (max-width: 600px) {
   .story-board {
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 5%;
     padding-bottom: 5%;
-    background-color: #eeeeee;
+    background-color: #eee;
     word-wrap: break-word;
   }
   .back-about-btn {
