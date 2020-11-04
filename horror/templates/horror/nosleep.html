@@ -24,7 +24,7 @@
     <meta property="og:description" content="{{data.selftext | truncatechars:200}}">
     <meta property="og:type" content="website">
     <meta property="og:image" content="{% static 'images/thenosleep.png' %}">
-    <meta property="og:url" content="https://thenosleep.com/%{{data.id}}">
+    <meta property="og:url" content="https://thenosleep.com/{{data.id}}">
 </head>
 
 <body>
@@ -70,8 +70,8 @@
         <a href="#top" class="go-top-btn">Read again</a>
         <hr>
         <a href="" class="share-wts-btn" onClick="return shareToWhatsapp()">Share on whatsapp</a>
-        <a class="share-face-btn"
-            href="https://www.facebook.com/sharer/sharer.php?u=https://thenosleep.com/%{{data.id}}" target="_blank">
+        <a class="share-face-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://thenosleep.com/{{data.id}}"
+            target="_blank">
             Share on Facebook
         </a>
         <div class="credit-section">
@@ -113,7 +113,7 @@
         function shareToWhatsapp() {
 
             // Getting user input 
-            var link = "https://thenosleep.com/%{{data.id}}"
+            var link = "https://thenosleep.com/{{data.id}}"
             console.log(link)
             // Opening URL 
             window.open(
