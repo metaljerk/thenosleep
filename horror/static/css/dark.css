@@ -173,6 +173,10 @@ p a:hover {
   height: 25px;
   width: 25px;
 }
+.awards-section {
+  font-size: 15px;
+  color: #eee;
+}
 .share-btn {
   display: none;
 }

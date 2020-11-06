@@ -18,14 +18,14 @@ def about(request):
 
 
 #getting reddit posts using PRAW
-def horror(request):
+def hot_post(request):
     data = []
     nosleep_data = reddit.subreddit('NoSleep').hot(limit=50)
     for post in nosleep_data:
         if post.stickied == False:
             data.append(post)
     context = {'data': data}
-    return render(request, 'horror/horror.html', context)
+    return render(request, 'horror/hot_post.html', context)
 
 
 #to render post by post id

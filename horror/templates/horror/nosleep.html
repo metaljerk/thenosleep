@@ -30,18 +30,17 @@
 <body>
     <a name=" top"></a>
     <div class="top-set-div">
-        <a href="{% url 'horror' %}" class="back-about-btn">Back</a>
+        <a href="{% url 'hot_post' %}" class="back-about-btn">Back</a>
         <a href="#" class="dark-switch-btn" onClick="return darkSwitch()">Dark</a>
         <a href="#" class="light-switch-btn" onClick="return lightSwitch()">Light</a>
     </div>
 
     <div class="story-board">
-
         <h3>{{data.title}}
             <img src=" {% static 'images/clown.png' %}" alt="Image of a clown">
         </h3>
         <h6>By <a class="user-name-link" href="https://www.reddit.com/user/{{data.author}}">r/{{data.author}}</a></h6>
-        <h6>
+        <h6 class="awards-section">
             {% if data.over_18 %}
             [NSFW]
             {% endif %}
@@ -59,9 +58,8 @@
         </h6>
 
         <hr>
-
-        {% autoescape on %}
-        <p>{{data.selftext | linebreaks }}</p>
+        {% autoescape off %}
+        <p>{{data.selftext | linebreaks}}</p>
         {% endautoescape %}
         <hr>
         <p>
@@ -88,7 +86,6 @@
 
     </div>
 
-
     <script>
         var themeSet = localStorage.getItem('theme')
         var light = "{% static 'css/light.css' %}"
@@ -100,6 +97,7 @@
         else {
             darkSwitch()
         }
+
         function lightSwitch() {
             document.getElementById("horrorsheet").href = light
             localStorage.setItem('theme', light)
@@ -122,7 +120,7 @@
                 // open in a new window. 
                 '_blank'
             );
-        } 
+        }
     </script>
 </body>
 
