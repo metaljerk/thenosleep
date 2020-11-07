@@ -17,3 +17,5 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [path('', include('horror.urls'))]
+handler404 = 'horror.views.custom_404'
+handler500 = 'horror.views.custom_500'

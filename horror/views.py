@@ -33,5 +33,16 @@ def nosleep(request, id):
     post_id = request.GET.get('id')
     # print(post_id)
     data = reddit.submission(id=id)
-    context = {'data': data}
-    return render(request, 'horror/nosleep.html', context)
+    if data.subreddit == 'NoSleep':
+        context = {'data': data}
+        return render(request, 'horror/nosleep.html', context)
+    else:
+        return render(request, 'horror/404.html')
+
+
+def custom_404(request, exception):
+    return render(request, 'horror/404.html')
+
+
+def custom_500(request):
+    return render(request, 'horror/500.html')
