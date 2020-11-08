@@ -189,14 +189,14 @@ p a:hover {
   box-shadow: 3px 5px #555;
   opacity: 1;
 }
-.share-face-btn {
+.share-tweet-btn {
   font-size: large;
   color: #008891;
   font-family: "Syne Mono", monospace;
   border: 2px solid#008891;
   padding: 1%;
 }
-.share-face-btn:hover {
+.share-tweet-btn:hover {
   color: #555;
   text-decoration: none;
   box-shadow: 3px 5px #555;
@@ -413,7 +413,7 @@ h3:nth-child(3) {
   .share-wts-btn {
     display: inline;
   }
-  .share-face-btn {
+  .share-tweet-btn {
     display: none;
   }
 }
