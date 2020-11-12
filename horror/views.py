@@ -42,8 +42,8 @@ def nosleep(request, id):
         return render(request, 'horror/404.html')
 
 
-#rest api endpoint
-class RedditView(views.APIView):
+#list api
+class RedditListView(views.APIView):
     def get(self, request):
         data = []
         nosleep_data = reddit.subreddit('NoSleep').hot(limit=50)
@@ -53,12 +53,24 @@ class RedditView(views.APIView):
                     "post_id": post.id,
                     "author": str(post.author),
                     "title": post.title,
-                    "post": post.selftext,
-                    "nsfw": post.over_18,
-                    "flair": post.link_flair_text,
-                    "upvote": post.score,
-                    "gildings": post.gildings
                 }])
+        return Response(data)
+
+
+#read api
+class RedditReadView(views.APIView):
+    def get(self, request, id):
+        post_id = request.query_params.get('id')
+        data = reddit.submission(id=id)
+        if data.subreddit == 'NoSleep':
+            data = [{
+                "post": data.selftext,
+                "nsfw": data.over_18,
+                "flair": data.link_flair_text,
+                "upvote": data.score,
+                "gildings": data.gildings
+            }]
+
         return Response(data)
 
 
