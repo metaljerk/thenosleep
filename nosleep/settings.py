@@ -32,7 +32,8 @@ ALLOWED_HOSTS = ['thenosleep.com']
 INSTALLED_APPS = [
     'django.contrib.admin', 'django.contrib.auth',
     'django.contrib.contenttypes', 'django.contrib.sessions',
-    'django.contrib.messages', 'django.contrib.staticfiles', 'horror'
+    'django.contrib.messages', 'django.contrib.staticfiles', 'horror',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -65,6 +66,12 @@ TEMPLATES = [
         },
     },
 ]
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.AllowAny']
+}
 
 WSGI_APPLICATION = 'nosleep.wsgi.application'
 

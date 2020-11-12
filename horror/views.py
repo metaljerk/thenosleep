@@ -4,6 +4,8 @@ import json
 import requests
 import os
 import praw
+from rest_framework import views
+from rest_framework.response import Response
 
 client_id = os.environ['CLIENT_ID']
 client_sec = os.environ['CLIENT_SECRET']
@@ -38,6 +40,26 @@ def nosleep(request, id):
         return render(request, 'horror/nosleep.html', context)
     else:
         return render(request, 'horror/404.html')
+
+
+#rest api endpoint
+class RedditView(views.APIView):
+    def get(self, request):
+        data = []
+        nosleep_data = reddit.subreddit('NoSleep').hot(limit=50)
+        for post in nosleep_data:
+            if post.stickied == False:
+                data.append([{
+                    "post_id": post.id,
+                    "author": str(post.author),
+                    "title": post.title,
+                    "post": post.selftext,
+                    "nsfw": post.over_18,
+                    "flair": post.link_flair_text,
+                    "upvote": post.score,
+                    "gildings": post.gildings
+                }])
+        return Response(data)
 
 
 def custom_404(request, exception):
