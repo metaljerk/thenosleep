@@ -15,18 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from django.contrib.sitemaps.views import sitemap
-from horror.sitemaps import StaticViewSitemap
-
-sitemaps = {
-    'static': StaticViewSitemap,
-}
 
 urlpatterns = [
     path('', include('horror.urls')),
-    path('sitemap.xml',
-         sitemap, {'sitemaps': sitemaps},
-         name='django.contrib.sitemaps.views.sitemap'),
     path('api-auth/', include('rest_framework.urls'))
 ]
 handler404 = 'horror.views.custom_404'
