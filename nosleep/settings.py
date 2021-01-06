@@ -33,9 +33,9 @@ INSTALLED_APPS = [
     'django.contrib.admin', 'django.contrib.auth',
     'django.contrib.contenttypes', 'django.contrib.sessions',
     'django.contrib.messages', 'django.contrib.staticfiles', 'horror',
-    'rest_framework'
+    'rest_framework', 'django.contrib.sites', 'django.contrib.sitemaps'
 ]
-
+SITE_ID = 1
 MIDDLEWARE = [
     # Simplified static file serving.
     # https://warehouse.python.org/project/whitenoise/
